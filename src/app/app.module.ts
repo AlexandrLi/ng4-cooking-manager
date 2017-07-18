@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header';
 import {
+  RecipeService,
   RecipesComponent,
   RecipeListComponent,
   RecipeDetailComponent,
   RecipeItemComponent
 } from './recipes';
 import {
+  ShoppingListService,
   ShoppingListComponent,
   ShoppingEditComponent
 } from './shopping-list';
@@ -30,7 +32,7 @@ import { DropdownDirective } from './shared';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [RecipeService, ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
