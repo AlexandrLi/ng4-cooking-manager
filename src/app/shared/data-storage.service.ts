@@ -3,6 +3,7 @@ import { Http, Response } from '@angular/http';
 
 import { Recipe, RecipeService } from './../recipes';
 import { Observable } from 'rxjs/Rx';
+import 'rxjs/add/operator/map'
 
 const baseURL = 'https://cooking-manager.firebaseio.com/';
 
@@ -24,8 +25,7 @@ export class DataStorageService {
           }
         }
         return recipes;
-      }
-      )
+      })
       .subscribe((recipes: Recipe[]) => {
         this.recipeService.setRecipes(recipes);
       });
