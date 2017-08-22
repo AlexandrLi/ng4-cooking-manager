@@ -9,9 +9,12 @@ import { DataStorageService } from './../shared/data-storage.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  isAuthenticated: boolean;
   constructor(
     private dsService: DataStorageService,
-    private authService: AuthService) { }
+    private authService: AuthService) {
+    this.isAuthenticated = this.authService.isAuthenticated();
+  }
   onSaveData() {
     this.dsService.storeRecipes().subscribe((result) => console.log(result));
   }
