@@ -13,8 +13,8 @@
         <li class="dropdown" appDropdown>
           <a class="dropdown-toggle clickable" role="button">Menu<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a class="clickable">Save Data</a></li>
-            <li><a class="clickable">Fetch Data</a></li>
+            <li><a class="clickable" (click)="onSaveData()">Save Data</a></li>
+            <li><a class="clickable" (click)="onFetchData()">Fetch Data</a></li>
           </ul>
         </li>
       </ul>
