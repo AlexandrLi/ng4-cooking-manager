@@ -1,9 +1,8 @@
 language: node_js
 node_js:
-  - "7.10"
+  - "node"
 
 cache: 
-  yarn: true
   directories:
   - node_modules
 
@@ -12,7 +11,7 @@ branches:
     - develop
 
 before_script:
-  - yarn global add @angular/cli
+  - npm i -g @angular/cli
 
 script:
   - ng build --prod --buildOptimizer
